@@ -1,0 +1,22 @@
+name: Software versions
+
+on: 
+  push: 
+    branches: [ main ]
+jobs:
+   build: 
+      runs-on: ubuntu-latest
+      steps: 
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: run a one line script
+        run: echo Hello, world!!
+      - name: java version
+        run: java --version
+      - name: maven version
+        run: maven --version
+      - name: python version
+        run: python --version
+      - name: docker version
+        run: docker --version
